@@ -3,135 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 18 - Quiz Result</title>
-    <style>
-        body {
-            background-color: #1a0625;
-            color: white;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            margin: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 400px;
-        }
-        .header-card {
-            background: linear-gradient(180deg, #3d124e 0%, #260a33 100%);
-            border-radius: 20px;
-            padding: 30px 20px;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .congrats { font-weight: bold; margin-bottom: 15px; }
-        .score { font-size: 3.5rem; font-weight: bold; margin: 0; }
-        .score-label { color: #a582b5; font-size: 0.9rem; margin-bottom: 20px; }
-        .character { width: 100px; margin-top: 10px; }
-
-        .card {
-            background-color: #2d0b3d;
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .progress-label { margin-bottom: 10px; font-size: 0.9rem; font-weight: bold; }
-        .progress-bar {
-            height: 25px;
-            background-color: #d84361;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-        .progress-fill {
-            height: 100%;
-            background-color: #48bb78;
-            width: 44%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-        }
-
-        .login-banner {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border: 1px solid #4a135e;
-        }
-        .login-text { font-size: 0.8rem; flex: 1; }
-        .btn-login {
-            background: white;
-            color: black;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .stats-header {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-        .stat-item {
-            background: rgba(0,0,0,0.2);
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .green { color: #48bb78; }
-        .red { color: #f56565; }
-        .blue { color: #4299e1; }
-        .orange { color: #ed8936; }
-    </style>
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="bai19.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header-card">
-            <div class="congrats">🎉 Làm tốt lắm, Hãy tiếp tục làm!</div>
-            <div class="score">38450</div>
-            <div class="score-label">Điểm số</div>
-            <img src="https://img.icons8.com/bubbles/100/000000/skateboard.png" class="character">
-        </div>
 
-        <div class="card">
-            <div class="progress-label">Câu đúng ⓘ</div>
-            <div class="progress-bar">
-                <div class="progress-fill">44%</div>
+    <main class="game-container">
+        <header>
+            <h1>Memory Game</h1>
+            <div class="stats">
+                Lượt click: <span id="move-count">0</span>
             </div>
-        </div>
+            <button id="reset-btn">Chơi lại</button>
+        </header>
 
-        <div class="card login-banner">
-            <div style="font-size: 1.5rem;">💰</div>
-            <div class="login-text">Đăng nhập ngay để lưu kết quả, kiếm phần thưởng hàng ngày...</div>
-            <button class="btn-login">Đăng nhập</button>
-        </div>
+        <section class="memory-game" id="game-board">
+            </section>
+    </main>
 
-        <div class="card">
-            <div class="stats-header">
-                <span>Số liệu thống kê hiệu suất</span>
-                <span>100 câu hỏi</span>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-item green">✔ 44 Câu đúng</div>
-                <div class="stat-item red">✖ 56 Sai</div>
-                <div class="stat-item blue">⏱ 6 s Time/ques</div>
-                <div class="stat-item orange">🔥 6 Vệt</div>
-            </div>
-        </div>
-    </div>
+    <script src="bai19.js"></script>
 </body>
 </html>
